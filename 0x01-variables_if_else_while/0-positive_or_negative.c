@@ -3,7 +3,9 @@
 #include <stdio.h>
 
 /*
- * main - print whether the number stored in the variable n igative
+ * main - Entry point
+ *
+ * Description: positive or negative or zero
  *
  * Return: Always 0 (Success)
  */
