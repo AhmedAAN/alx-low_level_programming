@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /*
- * main - print whether the number stored in the variable n is positive or negative
+ * main - print whether the number stored in the variable n igative
  *
  * Return: Always 0 (Success)
  */
@@ -24,6 +24,7 @@ int main(void)
 	else
 	{
 		printf("%d is negative\n", n);
-	}	
+	}
+
 	return (0);
 }
