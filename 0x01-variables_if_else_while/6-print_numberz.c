@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entery point
  *
  * Description: 'fsfs'
@@ -16,6 +16,6 @@ int main(void)
 		putchar(n);
 	}
 	putchar('\n');
-	
+
 	return (0);
 }
