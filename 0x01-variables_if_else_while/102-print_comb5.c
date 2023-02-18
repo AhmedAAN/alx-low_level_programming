@@ -22,18 +22,15 @@ int main(void)
 			{
 				for (nn = cch + 1; nn <= 57; nn++)
 				{
-					if (ch != n && cch != nn)
+					putchar(ch);
+					putchar(cch);
+					putchar(' ');
+					putchar(n);
+					putchar(nn);
+					if (ch != 57 && cch != 56)
 					{
-						putchar(ch);
-						putchar(cch);
+						putchar(',');
 						putchar(' ');
-						putchar(n);
-						putchar(nn);
-						if (ch != 57 && cch != 56)
-						{
-							putchar(',');
-							putchar(' ');
-						}
 					}
 				}
 			}
