@@ -13,13 +13,16 @@ int main(void)
 	int com = 44;
 	int space = 32;
 
-	for (n = 48; n <= 56; n++)
+	for (n = 48; n <= 57; n++)
 	{
 		putchar(n);
-		putchar(com);
-		putchar(space);
+		if (n < 57)
+		{
+			putchar(com);
+			putchar(space);
+		}
 	}
-	putchar(57, '\n');
+	putchar('\n');
 
 	return (0);
 }
