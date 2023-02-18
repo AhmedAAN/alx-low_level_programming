@@ -13,7 +13,7 @@ int main(void)
 	int cch;
 	int ccch;
 
-	for (ch = 48; ch <= 57; ch ++)
+	for (ch = 48; ch <= 57; ch++)
 	{
 		for (cch = ch + 1; cch <= 57; cch++)
 		{
