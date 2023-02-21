@@ -4,7 +4,7 @@
  * print_last_digit-prints the last digit of an interger.
  * @x:number to compute last digit.
  * @n:numbaasader to compute last digit.
- * Return:last digit.
+ * Return:n.
  */
 int print_last_digit(int x)
 {
