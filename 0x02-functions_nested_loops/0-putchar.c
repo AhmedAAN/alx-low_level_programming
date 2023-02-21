@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-	char m[] = {"_", "p", "u", "t", "c", "h", "a", "r"};
-	int n;
-
-	for (n = 0; n <= 7; n++)
-	{
-		_putchar(m[n]);
-	}
-	_putchar('\n');
+	_purchar("_");
+	_purchar("p");
+	_purchar("u");
+	_purchar("t");
+	_purchar("c");
+	_purchar("h");
+	_purchar("a");
+	_purchar("r");
 
 	return (0);
 }
