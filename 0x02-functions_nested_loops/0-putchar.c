@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char m[] = {"_", "p", "u", "t", "c", "h", "a", "r"};
+	char m[8] = {"_", "p", "u", "t", "c", "h", "a", "r"};
 	int n;
 
 	for (n = 0; n <= 7; n++)
