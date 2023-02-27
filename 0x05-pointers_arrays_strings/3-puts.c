@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _puts - check the code
  * @str: sgsdgsdgsd
  */
 void _puts(char *str)
