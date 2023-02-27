@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _stlen - check the code
+ * _strlen - check the code
  * @s: dsfsdfsdfds
  * Return: lenght
  */
