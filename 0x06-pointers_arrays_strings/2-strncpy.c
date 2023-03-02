@@ -5,6 +5,7 @@
  * @dest: sdfsdfsdf
  * @src: sdfsdfsdf
  * @n: sdffsd
+ *
  * return: sdfsdfsdf
  */
 char *_strncpy(char *dest, char *src, int n)
