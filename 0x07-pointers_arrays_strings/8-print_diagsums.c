@@ -8,19 +8,17 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int x, y;
-	int dig1;
-	int dig2;
+	int i, j, p, l = 0, r = 0;
 
-	dig1 = 0;
-	dig2 = 0;
-	for (x = 0; x < size; x++)
+	for (i = 0; i < size; i++)
 	{
-		dig1 += a[i][i];
+		p = (i * size) + i;
+		l += *(a + p);
 	}
-	for (y = size - 1; y >= 0; y--)
+	for (j = 0; j < size; j++)
 	{
-		dig2 += a[i][i];
+		p = (j * size) + (size - 1 - j);
+		r += *(a + p);
 	}
-	printf("%d, %d", dig1, dig2);
+	printf("%i, %i\n", l, r);
 }
