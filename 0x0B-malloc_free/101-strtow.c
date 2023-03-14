@@ -12,6 +12,8 @@ char **strtow(char *str)
 	char *s;
 	char *fstr;
 
+	if ( str == NULL || str == "")
+		return (NULL);
 	while (str[i] != '\0')
 	{
 		if (str[i] != ' ')
@@ -56,7 +58,7 @@ char **strtow(char *str)
 		y++;
 	}
 	x++;
-	fstr[x] = '\0';
+	fstr[x] = NULL;
 
 	return (fstr);
 }
