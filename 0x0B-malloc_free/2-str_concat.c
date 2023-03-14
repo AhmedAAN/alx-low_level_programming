@@ -9,17 +9,17 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, z;
+	int i, j, x, y, z;
 	char *s;
 
 	i = 0;
 	j = 0;
-	if (s1[0] != NULL)
+	if (s1[0])
 	{
 		while (s1[i])
 			i++;
 	}
-	if (s2[0] != NULL)
+	if (s2[0])
 	{
 		while (s2[j])
 			j++;
