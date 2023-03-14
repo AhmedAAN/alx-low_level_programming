@@ -12,7 +12,7 @@ char **strtow(char *str)
 	char *s;
 	char **fstr;
 
-	s = 0;
+	s = malloc(sizeof(char) * 100);
 	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 	while (str[i] != '\0')
