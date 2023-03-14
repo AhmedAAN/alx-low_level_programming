@@ -10,9 +10,9 @@ char **strtow(char *str)
 {
 	int i = 0, count = 0, words = 0, x = 0, count2, n = 0, m, y = 0;
 	char *s;
-	char *fstr;
+	char **fstr;
 
-	if ( str == NULL || str == "")
+	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 	while (str[i] != '\0')
 	{
