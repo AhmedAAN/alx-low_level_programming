@@ -50,7 +50,7 @@ char **strtow(char *str)
 		fstr[x] = malloc(sizeof(char) * count2 + 1);
 		if (fstr[x] == NULL)
 			return (NULL);
-		for (m = 0; m < count2, n < y; m++, n++)
+		for (m = 0; m < count2 && n < y; m++, n++)
 		{
 			fstr[x][m] = s[n];
 		}
