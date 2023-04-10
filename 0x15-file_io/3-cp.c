@@ -78,30 +78,36 @@ int main(int argc, char *argv[])
 	int from, to, close_from, close_to;
 	ssize_t r, w;
 	char buffer[1024];
-	mode_t perm;
+	int oldval;
 
 	check_arg_num(argc);
 
+	oldval = umask(0);
 	from = open(argv[1], O_RDONLY);
 	check_file_read(from, argv[1], -1, -1);
 
-	perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
+	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	check_file_write(to, argv[2], from, -1);
 
-	r = read(from, buffer, 1024);
-	check_file_read(r, argv[1], from, to);
+	r = 1024;
+	while (r == 1024)
+	{
+		umask(oldval);
+		r = read(from, buffer, 1024);
+		check_file_read(r, argv[1], from, to);
 
-	w = write(to, buffer, r);
-	if (w != r)
+		w = write(to, buffer, r);
+		if (w != r)
 		w = -1;
-	check_file_write(w, argv[2], from, to);
+		check_file_write(w, argv[2], from, to);
+	}
 
 	close_to = close(to);
 	check_close(close_to, to);
 
 	close_from = close(from);
 	check_close(close_from, from);
+
 
 	return (0);
 }
