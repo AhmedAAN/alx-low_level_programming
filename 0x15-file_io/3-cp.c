@@ -68,23 +68,25 @@ void check_close(int check, int value)
 }
 
 /**
- * cp - a program that copies the content of a file to another file.
+ * main - a program that copies the content of a file to another file.
  * @argc: number of arguments passed
  * @argv: array of pointers to the arguments
  * Return: 0
  */
-int cp(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int from, to, close_from, close_to;
 	ssize_t r, w;
 	char buffer[1024];
+	mode_t perm;
 
 	check_arg_num(argc);
 
 	from = open(argv[1], O_RDONLY);
 	check_file_read(from, argv[1], -1, -1);
 
-	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
 	check_file_write(to, argv[2], from, -1);
 
 	r = read(from, buffer, 1024);
