@@ -4,7 +4,7 @@
  * flip_bits - get the number of bits you would need to flip
  * @n: the first number
  * @m: the second number
- * Return: the number of bots you need to change
+ * Return: the number of bits you need to change
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
@@ -15,7 +15,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	if (n == m)
 		return (0);
 	x = n ^ m;
-	for (i = 0; i < (sizeof(unsigned long int) * 8) - 1; i++)
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
 		if (x & 1)
 			sum += 1;
