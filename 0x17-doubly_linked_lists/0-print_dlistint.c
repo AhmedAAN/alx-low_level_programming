@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "lists.h"
 
 /**
  * print_dlistint - prints all the elements of a list
@@ -7,15 +7,18 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *current;
 	int num;
 
 	num = 0;
-	current = h;
-	while (current)
+	if (h == NULL)
+		return (num);
+	while (h->prev != NULL)
+		h = h->prev;
+
+	while (h)
 	{
-		printf("%i", current->n);
-		current = current->next;
+		printf("%i\n", h->n);
+		h = h->next;
 		num++;
 	}
 	return (num);
